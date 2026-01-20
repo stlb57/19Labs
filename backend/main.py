@@ -26,12 +26,20 @@ from app.modules.iam.routes import router as iam_router
 from app.modules.auth.routes import router as auth_router
 from app.modules.marketing.routes import router as marketing_router
 from app.modules.billing.routes import router as billing_router
+from app.modules.accession.routes import router as accession_router
+from app.modules.results.routes import router as results_router
+from app.modules.reports.routes import router as reports_router
+from app.modules.portal.routes import router as portal_router
 
 app.include_router(onboarding_router)
 app.include_router(iam_router)
 app.include_router(auth_router)
 app.include_router(marketing_router)
 app.include_router(billing_router)
+app.include_router(accession_router)
+app.include_router(results_router)
+app.include_router(reports_router)
+app.include_router(portal_router)
 
 @app.get("/")
 async def health_check():
